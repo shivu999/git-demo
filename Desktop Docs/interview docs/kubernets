@@ -1,0 +1,45 @@
+tell me about your self and roles and responsiblity
+what is devops?
+How do you implement Devops in real time envioronment?
+Explain devops tools and how do you used in your project.
+what is IAAS, PAAS and SAAS and how do we use each service in the real time.
+
+
+----------------Kubernets--------------------
+What do you understand by Kubernetes?
+What are the difference between Kubernetes and Docker Swarm?
+kubernets architechure?
+	a.	Master Component
+		i.	etcd
+		ii.	Scheduler
+		iii.API Server
+		iv.	Controller Manager
+		v.	Kubectl
+	b.	Node Component
+		i.	Kubelet
+		ii.	CAdvisor
+		iii. Kube-proxy
+pods?
+Namespaces
+Controllers
+	a.	ReplicaSet
+	b.	ReplicationController
+	c.	Deployment
+		i.	Canary
+		ii.	Blue/Green
+		iii.	Ramped
+		iv.	Recreate
+	d.	Daemon Sets
+Service type
+	a.	ClusterIP
+	b.	NodePort
+	c.	LoadBalancer
+	d.	Ingress
+can you write nginx deployment menifets file?
+Container Network Plugins
+	a.	Calico
+	b.	Fannel
+	c.	WeaveNet 
+
+
+https://github.com/r0oth3x49/acloud-dl

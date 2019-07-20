@@ -1,0 +1,589 @@
+login as: ubuntu
+Authenticating with public key "imported-openssh-key"
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-1041-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Jun 24 10:19:13 UTC 2019
+
+  System load:  0.02               Processes:              109
+  Usage of /:   96.3% of 30.96GB   Users logged in:        0
+  Memory usage: 27%                IP address for eth0:    172.31.86.242
+  Swap usage:   0%                 IP address for docker0: 172.17.0.1
+
+  => / is using 96.3% of 30.96GB
+
+ * Ubuntu's Kubernetes 1.14 distributions can bypass Docker and use containerd
+   directly, see https://bit.ly/ubuntu-containerd or try it now with
+
+     snap install microk8s --classic
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+13 packages can be updated.
+1 update is a security update.
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Mon Jun 24 06:31:44 2019 from 192.46.83.5
+ubuntu@ip-172-31-86-242:~$ sudo -i
+root@ip-172-31-86-242:~# ls -a
+.     .bash_history  .kube     .ssh      config      image.txt
+..    .bashrc        .local    .vim      deploy      snap
+.aws  .docker        .profile  .viminfo  deploy.yml
+root@ip-172-31-86-242:~# az login
+az: command not found
+root@ip-172-31-86-242:~# aws login
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: argument command: Invalid choice, valid choices are:
+
+acm                                      | alexaforbusiness                     
+apigateway                               | application-autoscaling              
+appstream                                | appsync                              
+athena                                   | autoscaling                          
+autoscaling-plans                        | batch                                
+budgets                                  | ce                                   
+cloud9                                   | clouddirectory                       
+cloudformation                           | cloudfront                           
+cloudhsm                                 | cloudhsmv2                           
+cloudsearch                              | cloudsearchdomain                    
+cloudtrail                               | cloudwatch                           
+codebuild                                | codecommit                           
+codepipeline                             | codestar                             
+cognito-identity                         | cognito-idp                          
+cognito-sync                             | comprehend                           
+cur                                      | datapipeline                         
+dax                                      | devicefarm                           
+directconnect                            | discovery                            
+dms                                      | ds                                   
+dynamodb                                 | dynamodbstreams                      
+ec2                                      | ecr                                  
+ecs                                      | efs                                  
+elasticache                              | elasticbeanstalk                     
+elastictranscoder                        | elb                                  
+elbv2                                    | emr                                  
+es                                       | events                               
+firehose                                 | gamelift                             
+glacier                                  | glue                                 
+greengrass                               | guardduty                            
+health                                   | iam                                  
+importexport                             | inspector                            
+iot                                      | iot-data                             
+iot-jobs-data                            | kinesis                              
+kinesis-video-archived-media             | kinesis-video-media                  
+kinesisanalytics                         | kinesisvideo                         
+kms                                      | lambda                               
+lex-models                               | lex-runtime                          
+lightsail                                | logs                                 
+machinelearning                          | marketplace-entitlement              
+marketplacecommerceanalytics             | mediaconvert                         
+medialive                                | mediapackage                         
+mediastore                               | mediastore-data                      
+meteringmarketplace                      | mgh                                  
+mobile                                   | mq                                   
+mturk                                    | opsworks                             
+opsworkscm                               | organizations                        
+pinpoint                                 | polly                                
+pricing                                  | rds                                  
+redshift                                 | rekognition                          
+resource-groups                          | resourcegroupstaggingapi             
+route53                                  | route53domains                       
+sagemaker                                | sagemaker-runtime                    
+sdb                                      | serverlessrepo                       
+servicecatalog                           | servicediscovery                     
+ses                                      | shield                               
+sms                                      | snowball                             
+sns                                      | sqs                                  
+ssm                                      | stepfunctions                        
+storagegateway                           | sts                                  
+support                                  | swf                                  
+transcribe                               | translate                            
+waf                                      | waf-regional                         
+workdocs                                 | workmail                             
+workspaces                               | xray                                 
+s3api                                    | s3                                   
+configure                                | deploy                               
+configservice                            | opsworks-cm                          
+runtime.sagemaker                        | history                              
+help
+root@ip-172-31-86-242:~# sudo az login
+sudo: az: command not found
+root@ip-172-31-86-242:~# sudo apt-get install azure-cli
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package azure-cli
+root@ip-172-31-86-242:~# sudo apt-get install curl apt-transport-https lsb-release gnupg
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+lsb-release is already the newest version (9.20170808ubuntu1).
+curl is already the newest version (7.58.0-2ubuntu3.7).
+gnupg is already the newest version (2.2.4-1ubuntu1.2).
+The following packages were automatically installed and are no longer required:
+  linux-aws-headers-4.15.0-1032 linux-aws-headers-4.15.0-1033
+  linux-aws-headers-4.15.0-1034 linux-aws-headers-4.15.0-1035
+  linux-aws-headers-4.15.0-1039 linux-modules-4.15.0-1039-aws
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 11 not upgraded.
+Need to get 1692 B of archives.
+After this operation, 153 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.11 [1692 B]
+Fetched 1692 B in 0s (149 kB/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... 215258 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_1.6.11_all.deb ...
+Unpacking apt-transport-https (1.6.11) ...
+Setting up apt-transport-https (1.6.11) ...
+root@ip-172-31-86-242:~# curl -sL https://packages.microsoft.com/keys/microsoft.asc | \
+>     gpg --dearmor | \
+>     sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
+root@ip-172-31-86-242:~# AZ_REPO=$(lsb_release -cs)
+root@ip-172-31-86-242:~# echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | \
+>     sudo tee /etc/apt/sources.list.d/azure-cli.list
+deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ bionic main
+root@ip-172-31-86-242:~# sudo apt-get update
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:5 https://packages.microsoft.com/repos/azure-cli bionic InRelease [3188 B]
+Ign:6 https://pkg.jenkins.io/debian-stable binary/ InRelease
+Hit:7 https://pkg.jenkins.io/debian-stable binary/ Release
+Get:9 https://packages.microsoft.com/repos/azure-cli bionic/main amd64 Packages [5737 B]
+Get:8 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease [15.4 kB]
+Reading package lists... Done
+E: Repository 'http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease' changed its 'Label' value from 'Oracle Java (JDK) 8 Installer PPA' to 'Oracle Java (JDK) 8 Installer PPA (DISCONTINUED)'
+N: This must be accepted explicitly before updates for this repository can be applied. See apt-secure(8) manpage for details.
+root@ip-172-31-86-242:~# sudo apt-get install azure-cli
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  linux-aws-headers-4.15.0-1032 linux-aws-headers-4.15.0-1033
+  linux-aws-headers-4.15.0-1034 linux-aws-headers-4.15.0-1035
+  linux-aws-headers-4.15.0-1039 linux-modules-4.15.0-1039-aws
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  azure-cli
+0 upgraded, 1 newly installed, 0 to remove and 11 not upgraded.
+Need to get 45.0 MB of archives.
+After this operation, 435 MB of additional disk space will be used.
+Get:1 https://packages.microsoft.com/repos/azure-cli bionic/main amd64 azure-cli all 2.0.67-1~bionic [45.0 MB]
+Fetched 45.0 MB in 2s (20.4 MB/s)
+Selecting previously unselected package azure-cli.
+(Reading database ... 215262 files and directories currently installed.)
+Preparing to unpack .../azure-cli_2.0.67-1~bionic_all.deb ...
+Unpacking azure-cli (2.0.67-1~bionic) ...
+Setting up azure-cli (2.0.67-1~bionic) ...
+root@ip-172-31-86-242:~# az login
+To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code AWCW4Q5YP to authenticate.
+^Croot@ip-172-31-86-242:~# ^C
+root@ip-172-31-86-242:~# az clustes
+az: 'clustes' is not in the 'az' command group. See 'az --help'.
+root@ip-172-31-86-242:~# az --help
+
+Group
+    az
+
+Subgroups:
+    account                     : Manage Azure subscription information.
+    acr                         : Manage private registries with Azure Container Registries.
+    ad                          : Manage Azure Active Directory Graph entities needed for Role Based
+                                  Access Control.
+    advisor                     : Manage Azure Advisor.
+    aks                         : Manage Azure Kubernetes Services.
+    ams               [Preview] : Manage Azure Media Services resources.
+    appservice                  : Manage App Service plans.
+    backup            [Preview] : Manage Azure Backups.
+    batch                       : Manage Azure Batch.
+    billing                     : Manage Azure Billing.
+    bot               [Preview] : Manage Microsoft Azure Bot Service.
+    cache             [Preview] : Commands to manage CLI objects cached using the
+                                  `--defer` argument.
+    cdn                         : Manage Azure Content Delivery Networks (CDNs).
+    cloud                       : Manage registered Azure clouds.
+    cognitiveservices           : Manage Azure Cognitive Services accounts.
+    consumption       [Preview] : Manage consumption of Azure resources.
+    container                   : Manage Azure Container Instances.
+    cosmosdb                    : Manage Azure Cosmos DB database accounts.
+    deployment                  : Manage Azure Resource Manager deployments at subscription scope.
+    deploymentmanager [Preview] : Create and manage rollouts for your service.
+    disk                        : Manage Azure Managed Disks.
+    dla               [Preview] : Manage Data Lake Analytics accounts, jobs, and catalogs.
+    dls               [Preview] : Manage Data Lake Store accounts and filesystems.
+    dms                         : Manage Azure Data Migration Service (DMS) instances.
+    eventgrid                   : Manage Azure Event Grid topics, event subscriptions, domains and
+                                  domain topics.
+    eventhubs                   : Manage Azure Event Hubs namespaces, eventhubs, consumergroups and
+                                  geo recovery configurations - Alias.
+    extension                   : Manage and update CLI extensions.
+    feature                     : Manage resource provider features.
+    functionapp                 : Manage function apps.
+    group                       : Manage resource groups and template deployments.
+    hdinsight         [Preview] : Manage HDInsight resources.
+    identity                    : Managed Service Identities.
+    image                       : Manage custom virtual machine images.
+    iot                         : Manage Internet of Things (IoT) assets.
+    iotcentral                  : Manage IoT Central assets.
+    keyvault                    : Manage KeyVault keys, secrets, and certificates.
+    kusto                       : Manage Azure Kusto resources.
+    lab               [Preview] : Manage Azure DevTest Labs.
+    lock                        : Manage Azure locks.
+    managedapp                  : Manage template solutions provided and maintained by Independent
+                                  Software Vendors (ISVs).
+    maps                        : Manage Azure Maps.
+    mariadb                     : Manage Azure Database for MariaDB servers.
+    monitor                     : Manage the Azure Monitor Service.
+    mysql                       : Manage Azure Database for MySQL servers.
+    network                     : Manage Azure Network resources.
+    openshift                   : Manage Azure Red Hat OpenShift Services.
+    policy                      : Manage resource policies.
+    postgres                    : Manage Azure Database for PostgreSQL servers.
+    ppg                         : Manage Proximity Placement Groups.
+    provider                    : Manage resource providers.
+    redis                       : Manage dedicated Redis caches for your Azure applications.
+    relay                       : Manage Azure Relay Service namespaces, WCF relays, hybrid
+                                  connections, and rules.
+    reservations      [Preview] : Manage Azure Reservations.
+    resource                    : Manage Azure resources.
+    role                        : Manage user roles for access control with Azure Active Directory
+                                  and service principals.
+    search            [Preview] : Manage Azure Search services, admin keys and query keys.
+    security          [Preview] : Manage your security posture with Azure Security Center.
+    servicebus                  : Manage Azure Service Bus namespaces, queues, topics,
+                                  subscriptions, rules and geo-disaster recovery configuration
+                                  alias.
+    sf                [Preview] : Manage and administer Azure Service Fabric clusters.
+    sig                         : Manage shared image gallery.
+    signalr                     : Manage Azure SignalR Service.
+    snapshot                    : Manage point-in-time copies of managed disks, native blobs, or
+                                  other snapshots.
+    sql                         : Manage Azure SQL Databases and Data Warehouses.
+    storage                     : Manage Azure Cloud Storage resources.
+    tag                         : Manage resource tags.
+    vm                          : Manage Linux or Windows virtual machines.
+    vmss                        : Manage groupings of virtual machines in an Azure Virtual Machine
+                                  Scale Set (VMSS).
+    webapp                      : Manage web apps.
+
+Commands:
+    configure                   : Manage Azure CLI configuration. This command is interactive.
+    feedback                    : Send feedback to the Azure CLI Team!
+    find              [Preview] : I'm an AI robot, my advice is based on our Azure
+                                  documentation as well as the usage patterns of Azure CLI and Azure
+                                  ARM users. Using me improves Azure products and documentation.
+    interactive       [Preview] : Start interactive mode. Installs the Interactive
+                                  extension if not installed already.
+    login                       : Log in to Azure.
+    logout                      : Log out to remove access to Azure subscriptions.
+    rest              [Preview] : Invoke a custom request.
+
+root@ip-172-31-86-242:~# az aks cluseters
+az aks: 'cluseters' is not in the 'az aks' command group. See 'az aks --help'.
+root@ip-172-31-86-242:~# az aks --help
+
+Group
+    az aks : Manage Azure Kubernetes Services.
+
+Commands:
+    browse                      : Show the dashboard for a Kubernetes cluster in a web browser.
+    create                      : Create a new managed Kubernetes cluster.
+    delete                      : Delete a managed Kubernetes cluster.
+    disable-addons              : Disable Kubernetes addons.
+    enable-addons               : Enable Kubernetes addons.
+    get-credentials             : Get access credentials for a managed Kubernetes cluster.
+    get-upgrades                : Get the upgrade versions available for a managed Kubernetes
+                                  cluster.
+    get-versions                : Get the versions available for creating a managed Kubernetes
+                                  cluster.
+    install-cli                 : Download and install kubectl, the Kubernetes command-line tool.
+    install-connector [Preview] : Install the ACI Connector on a managed Kubernetes
+                                  cluster.
+    list                        : List managed Kubernetes clusters.
+    remove-connector  [Preview] : Remove the ACI Connector from a managed Kubernetes
+                                  cluster.
+    remove-dev-spaces           : Remove Azure Dev Spaces from a managed Kubernetes cluster.
+    scale                       : Scale the node pool in a managed Kubernetes cluster.
+    show                        : Show the details for a managed Kubernetes cluster.
+    update-credentials          : Update credentials for a managed Kubernetes cluster, like service
+                                  principal.
+    upgrade                     : Upgrade a managed Kubernetes cluster to a newer version.
+    upgrade-connector [Preview] : Upgrade the ACI Connector on a managed Kubernetes
+                                  cluster.
+    use-dev-spaces              : Use Azure Dev Spaces with a managed Kubernetes cluster.
+    wait                        : Wait for a managed Kubernetes cluster to reach a desired state.
+
+root@ip-172-31-86-242:~# az aks browse
+az aks browse: error: the following arguments are required: --resource-group/-g, --name/-n
+usage: az aks browse [-h] [--verbose] [--debug]
+                     [--output {json,jsonc,table,tsv,yaml,none}]
+                     [--query JMESPATH] --resource-group RESOURCE_GROUP_NAME
+                     --name NAME [--disable-browser]
+                     [--listen-address LISTEN_ADDRESS]
+                     [--listen-port LISTEN_PORT]
+                     [--subscription _SUBSCRIPTION]
+root@ip-172-31-86-242:~# az aks show
+az aks show: error: the following arguments are required: --resource-group/-g, --name/-n
+usage: az aks show [-h] [--verbose] [--debug]
+                   [--output {json,jsonc,table,tsv,yaml,none}]
+                   [--query JMESPATH] --resource-group RESOURCE_GROUP_NAME
+                   --name NAME [--subscription _SUBSCRIPTION]
+root@ip-172-31-86-242:~# az aks show --help
+
+Command
+    az aks show : Show the details for a managed Kubernetes cluster.
+
+Arguments
+    --name -n           [Required] : Name of the managed cluster.
+    --resource-group -g [Required] : Name of resource group. You can configure the default group
+                                     using `az configure --defaults group=<name>`.
+
+Global Arguments
+    --debug                        : Increase logging verbosity to show all debug logs.
+    --help -h                      : Show this help message and exit.
+    --output -o                    : Output format.  Allowed values: json, jsonc, none, table, tsv,
+                                     yaml.  Default: json.
+    --query                        : JMESPath query string. See http://jmespath.org/ for more
+                                     information and examples.
+    --subscription                 : Name or ID of subscription. You can configure the default
+                                     subscription using `az account set -s NAME_OR_ID`.
+    --verbose                      : Increase logging verbosity. Use --debug for full debug logs.
+
+Examples
+    Show the details for a managed Kubernetes cluster
+        az aks show --name MyManagedCluster --resource-group MyResourceGroup
+
+root@ip-172-31-86-242:~# az aks show -g K8s
+az aks show: error: the following arguments are required: --name/-n
+usage: az aks show [-h] [--verbose] [--debug]
+                   [--output {json,jsonc,table,tsv,yaml,none}]
+                   [--query JMESPATH] --resource-group RESOURCE_GROUP_NAME
+                   --name NAME [--subscription _SUBSCRIPTION]
+root@ip-172-31-86-242:~# az aks show -g K8s --name K8sResource
+Please run 'az login' to setup account.
+root@ip-172-31-86-242:~# az login
+To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code AWSPYZCP6 to authenticate.
+[
+  {
+    "cloudName": "AzureCloud",
+    "id": "dde0e165-c44b-4413-88d8-9df03787e192",
+    "isDefault": true,
+    "name": "Visual Studio Enterprise",
+    "state": "Enabled",
+    "tenantId": "93f33571-550f-43cf-b09f-cd331338d086",
+    "user": {
+      "name": "sshindigeri@dxc.com",
+      "type": "user"
+    }
+  }
+]
+root@ip-172-31-86-242:~# az aks show -g K8s --name K8sResource
+{
+  "aadProfile": null,
+  "addonProfiles": {
+    "httpApplicationRouting": {
+      "config": {
+        "HTTPApplicationRoutingZoneName": "45d23185e5544308bd43.centralus.aksapp.io"
+      },
+      "enabled": true
+    },
+    "omsagent": {
+      "config": {
+        "logAnalyticsWorkspaceResourceID": "/subscriptions/dde0e165-c44b-4413-88d8-9df03787e192/resourceGroups/DefaultResourceGroup-CUS/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-dde0e165-c44b-4413-88d8-9df03787e192-CUS"
+      },
+      "enabled": true
+    }
+  },
+  "agentPoolProfiles": [
+    {
+      "availabilityZones": null,
+      "count": 2,
+      "enableAutoScaling": null,
+      "maxCount": null,
+      "maxPods": 110,
+      "minCount": null,
+      "name": "agentpool",
+      "orchestratorVersion": "1.12.8",
+      "osDiskSizeGb": 100,
+      "osType": "Linux",
+      "provisioningState": "Succeeded",
+      "type": "AvailabilitySet",
+      "vmSize": "Standard_DS2_v2"
+    }
+  ],
+  "apiServerAuthorizedIpRanges": null,
+  "dnsPrefix": "K8sResource-dns",
+  "enablePodSecurityPolicy": null,
+  "enableRbac": true,
+  "fqdn": "k8sresource-dns-c15b7688.hcp.centralus.azmk8s.io",
+  "id": "/subscriptions/dde0e165-c44b-4413-88d8-9df03787e192/resourcegroups/K8s/providers/Microsoft.ContainerService/managedClusters/K8sResource",
+  "kubernetesVersion": "1.12.8",
+  "linuxProfile": null,
+  "location": "centralus",
+  "name": "K8sResource",
+  "networkProfile": {
+    "dnsServiceIp": "10.0.0.10",
+    "dockerBridgeCidr": "172.17.0.1/16",
+    "networkPlugin": "kubenet",
+    "networkPolicy": null,
+    "podCidr": "10.244.0.0/16",
+    "serviceCidr": "10.0.0.0/16"
+  },
+  "nodeResourceGroup": "MC_K8s_K8sResource_centralus",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "K8s",
+  "servicePrincipalProfile": {
+    "clientId": "f9463023-6bbc-4e03-90dd-83135043013c"
+  },
+  "tags": {
+    "kubenetes": "Cluster"
+  },
+  "type": "Microsoft.ContainerService/ManagedClusters"
+}
+root@ip-172-31-86-242:~# kubectl
+kubectl controls the Kubernetes cluster manager.
+
+ Find more information at:
+https://kubernetes.io/docs/reference/kubectl/overview/
+
+Basic Commands (Beginner):
+  create         Create a resource from a file or from stdin.
+  expose         Take a replication controller, service, deployment or pod and
+expose it as a new Kubernetes Service
+  run            Run a particular image on the cluster
+  set            Set specific features on objects
+
+Basic Commands (Intermediate):
+  explain        Documentation of resources
+  get            Display one or many resources
+  edit           Edit a resource on the server
+  delete         Delete resources by filenames, stdin, resources and names, or
+by resources and label selector
+
+Deploy Commands:
+  rollout        Manage the rollout of a resource
+  scale          Set a new size for a Deployment, ReplicaSet, Replication
+Controller, or Job
+  autoscale      Auto-scale a Deployment, ReplicaSet, or ReplicationController
+
+Cluster Management Commands:
+  certificate    Modify certificate resources.
+  cluster-info   Display cluster info
+  top            Display Resource (CPU/Memory/Storage) usage.
+  cordon         Mark node as unschedulable
+  uncordon       Mark node as schedulable
+  drain          Drain node in preparation for maintenance
+  taint          Update the taints on one or more nodes
+
+Troubleshooting and Debugging Commands:
+  describe       Show details of a specific resource or group of resources
+  logs           Print the logs for a container in a pod
+  attach         Attach to a running container
+  exec           Execute a command in a container
+  port-forward   Forward one or more local ports to a pod
+  proxy          Run a proxy to the Kubernetes API server
+  cp             Copy files and directories to and from containers.
+  auth           Inspect authorization
+
+Advanced Commands:
+  diff           Diff live version against would-be applied version
+  apply          Apply a configuration to a resource by filename or stdin
+  patch          Update field(s) of a resource using strategic merge patch
+  replace        Replace a resource by filename or stdin
+  wait           Experimental: Wait for a specific condition on one or many
+resources.
+  convert        Convert config files between different API versions
+  kustomize      Build a kustomization target from a directory or a remote url.
+
+Settings Commands:
+  label          Update the labels on a resource
+  annotate       Update the annotations on a resource
+  completion     Output shell completion code for the specified shell (bash or
+zsh)
+
+Other Commands:
+  api-resources  Print the supported API resources on the server
+  api-versions   Print the supported API versions on the server, in the form of
+"group/version"
+  config         Modify kubeconfig files
+  plugin         Provides utilities for interacting with plugins.
+  version        Print the client and server version information
+
+Usage:
+  kubectl [flags] [options]
+
+Use "kubectl <command> --help" for more information about a given command.
+Use "kubectl options" for a list of global command-line options (applies to all
+commands).
+root@ip-172-31-86-242:~# kubectl get nodes
+error: the server doesn't have a resource type "nodes"
+root@ip-172-31-86-242:~# az aks install-cli
+Downloading client to "/usr/local/bin/kubectl" from "https://storage.googleapis.com/kubernetes-release/release/v1.15.0/bin/linux/amd64/kubectl"
+Please ensure that /usr/local/bin is in your search PATH, so the `kubectl` command can be found.
+root@ip-172-31-86-242:~# az aks get-credentials --resource-group K8s --name K8sResource
+Merged "K8sResource" as current context in /root/.kube/config
+root@ip-172-31-86-242:~# cd .kube
+root@ip-172-31-86-242:~/.kube# ls
+config  http-cache
+root@ip-172-31-86-242:~/.kube# cat config
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUV5RENDQXJDZ0F3SUJBZ0lSQU1CUHRaRklXb0thRXlBbndsc0xBVDh3RFFZSktvWklodmNOQVFFTEJRQXcKRFRFTE1Ba0dBMVVFQXhNQ1kyRXdIaGNOTVRrd05qSXhNRFV6TVRBeldoY05ORGt3TmpFek1EVTBNVEF6V2pBTgpNUXN3Q1FZRFZRUURFd0pqWVRDQ0FpSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnSVBBRENDQWdvQ2dnSUJBTUllCjN3cmd3LzROaGtHUzZreFdXSmlWN25PL05KMG1Na2dwZjllOHB4Sm9hdDUxa0RnYVE5TXNkeHA0U3E5YkJuRTgKZFJwdmM4eE5CYTNkRmN2OUJpVkk1WjVnUC85ZUJXbnBSZTRnNDRsTHNscGVlb2R0bW9wejRaZUlVTjFTZTZ3cApWb0NyZ09OQllhUVNHYUlLamJHdFVTcWdLVnBkRHdrYzlLa3FWUlZ3cVMxZXNUbldlY3pYa0NwT3dxN0hIY3NNCjFUUXF6TWhoN1FoSUxUdHNYQnlTWjlLVU4rVE95U1BpYWoyZmNWTE01Y1BXOGdNWWpwUUdRZkFHNW9WdlVIaTAKbE90OERHN2d0R0FZUTRidThIUFVtN1dnQ2lSOWJMY1RNSjV4b25jVVhrc0FwcEFNT3JGNzNXY0I3bytoQVcyaApZRGlmaU1kd1dJcUhDbDZySkNCQ3hUOGRnVVFIY1VEQmRCNFZ1b0hQV05VK3Fkc0NjWS9rS0xkczhPM2VDaUcxCktVME1CNTVqSFdUZTB3S0ZYa21RR2xzbkdDVjBNZ1dQMjRQVSs1cElqdExPYnpWY1g3NWp1TTduLzZvUDduZ2kKeVJDSEhqNWFTZXA4U3JrRGpPbDhsbTVZM2JSUTErbjhXZ3U2WHBhUGZuMGhPTHRsYzhva0IvRlh2bFpZbTU4YQpidVJKbkVLVVlEYVI5eWRVT1RMMzZrdmlmeUE3a1BwMGt5ZldKakRoUmF0ZXhBblNVSDdWTHBSWTFGd0xKREFaCnpuZVdxVEdnZGVacTJBVkNTZXZTZklqU3JWSURUbitwWGFJbnA1djhXaEEvUEVQUHdpNlE1RVhjN00rN2ZaQzEKUmEvZ25kZzJTeW9vTlY4cUVzVEZwUTBQSFVYVXA5UW5pT3FJRldSdkFnTUJBQUdqSXpBaE1BNEdBMVVkRHdFQgovd1FFQXdJQ3BEQVBCZ05WSFJNQkFmOEVCVEFEQVFIL01BMEdDU3FHU0liM0RRRUJDd1VBQTRJQ0FRQ0t0TXgxCmI1ZS9RL29YeEtGREJjcVRpaS9Qdk50OGlORUw2ekpIQWU2aTNDMkl3c1l6cGs1TGpRaVVDTDhjbSt0b3liQ2wKYndiendKZVkyU1NRWWZ6SUR5Q3BhZEk2emVES1lZVyt2SGVlWU5GYU8rYTJjODN6M0Z4MjRMdnNSZk05MVZacAo1eUl3TmNseDhxQnkxZDdWUjJlUzExY3duRGU5Smo5UzlBbWRUcHlaMVIxd0ZUaG9JdHNmTjZQRXNaell3ME5QClIweG9TN2NiZnFweCtlTEttcXkvUW1jL2N3cGl4UGovMm0rcHN2OFpDVml6Z0pkeDJ2VTIwdVZENmRrRU9VRUoKK0REdUh5L0FxUlpTMjkxeStnT3VnTUVPeUUvbDQ3MUJuOEttY0tsNmRrQXlMeXluQ01KcFQvNDFCbC8zZzdQcgpJTmVXeXJINGFYUGlMbHh4a3U4elRxeWV1TW9QK2ViMVR6bEZMamc5S05uWVhGdFFPTEVxdUx6T2VhdjBtN2RzCk5mTTI5SDRUM1dscHZSRXEveU13cUtqUkd6blUwTUdOQmZQeUZVVGt4RUFLbDVNVHVQNUpUZUpENzh5TnZhKzIKazZLWFlxZTJZbjk4TUt0MzZrVU9sVWNtOERhbzROTDBYRCtMYkFORnM2VWRWQytML2p6MkhWVE5Oc05CL3V6Rwo0cHFDeW5lcVpqMWVKRnpTVzQ4NmQyRkN2YW5QUjUzdzlNRzh0V1NVRGc4NHVqd3B1S1d6VWswcC82TDdReFBYCnJibnBtOWtTa0lPeVNwMy9BbENSR3lzejlHRVJSWHVDOURQQnppOGRQZVlJa0xNUk53QUJORmFOQjBNSVJ1aXgKR05iNWhBb0NyZitxRGdQUmhhMHQ4aWRVNDNlSXZtWmNURXNWdEE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://k8sresource-dns-c15b7688.hcp.centralus.azmk8s.io:443
+  name: K8sResource
+contexts:
+- context:
+    cluster: K8sResource
+    user: clusterUser_K8s_K8sResource
+  name: K8sResource
+current-context: K8sResource
+kind: Config
+preferences: {}
+users:
+- name: clusterUser_K8s_K8sResource
+  user:
+    client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUUvVENDQXVXZ0F3SUJBZ0lSQUxDQmJwa0pRd1p5RDVycjRwQ2t2bjh3RFFZSktvWklodmNOQVFFTEJRQXcKRFRFTE1Ba0dBMVVFQXhNQ1kyRXdIaGNOTVRrd05qSXhNRFV6TVRBeldoY05NakV3TmpJd01EVTBNVEF6V2pBdwpNUmN3RlFZRFZRUUtFdzV6ZVhOMFpXMDZiV0Z6ZEdWeWN6RVZNQk1HQTFVRUF4TU1iV0Z6ZEdWeVkyeHBaVzUwCk1JSUNJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBZzhBTUlJQ0NnS0NBZ0VBcEdCTlc0dGdPRHRyWmVsdU5TTVUKL2M0bUNXRDRRd2wvdmlLZDdXdWxjUVpDRFlUOUpCeG83WVpzWkpwVVZJc2VCbzJibjNqTUk2WEpEWnQ3SVVtWApORUJaL3JqS0RrOXB2WXB1WFIrbVZLMUUzSEV1c3FpeWplQ3Y3d0k2b3IrdHQ5YWorMEc5SG9WK2Fqb3VsczZhCnJnWDljeWF2S3owQzhVL0lYS3dDZlRScG5mNnY1djJKYlRZNVVEbjFOdmZpVkQ1SFVNTHlzREZlUEhQNEcxcysKdWpyOEFxK2hjamNjaEVmNXlGL2ZtQ1cyRFhkbnJwNkxxRzVpa1BFL3RQdTNYVSsxNGtLZHlPSTk0ZHYrc2VTSgo3NlBiMDM1T1MrQWNSaG5wQytKMVRVQklSNVRKWlZMTXdzMXU0RnR3ZGp3MFo2N0M0M2IrT0duMlRNZlRrelVICnA5c1ptN2J2c2ZyWUhWKytmMU5odnZmck5taVhRNEp3aWd3WG5KTmdRZm1hNmtWNkhrR3lNMGF6bXhFVUNFU20KS3FxV3hQdHROSGRBQmthYXl4WUNEeERWUHpaNTNrU2JUVUc1UnRqOHgzN2hQNDFMcXh6Y2N4RjR4clIyOU1ObgpEQUc0MnVOKzhESFFaK0l5a3BTRHl6SW9nZWZ2K2oxeXNsbDZQNXlobkRaMTRpNWFFL2RkMGlwek9KUCtLWXprCjV5bm02cXZyc2JmN08rNm9sVVZNYlBKUG41U3RySTAraTdGU2hDRlJNR1prL1VFUFVMVUxlbVgzKys5ODYrSWcKRVNWZDZxSk9pdisvU1JVSHM1bDBoSnFRWmg5UTZWbU9meFZHTjJrblNBNmM2U2Q0M0EzRnhkVHFvK0pDRDllNApvZFI1QVpaUkJzS3l5bHdOVzMrVVhPRUNBd0VBQWFNMU1ETXdEZ1lEVlIwUEFRSC9CQVFEQWdXZ01CTUdBMVVkCkpRUU1NQW9HQ0NzR0FRVUZCd01DTUF3R0ExVWRFd0VCL3dRQ01BQXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnSUIKQURDcVVscEltSkhxaDhNTVlqN2Y3ZWRvcVZJM0RKaFhVMkJqUm9Kc2hXWVRpWWVqdHJMRllkRjAyaEpXNHFTUgpPVmxBS0FJWUM3SGp5STdpUlkwVlpKK1U2bzFsbm1BM2xINnVVYUxJVmY0TFJ1dXdYRmMxaVpFTkZaWWRyeDlTCjFXUEppZkFrenRHa3V0RCtaUWYrUDFWUkZFeWhTcElKbkY3b3hGa2svZXJUT0oySkJPSGFicDZ2VHg5aXNFbEgKQ1JpVmc4ZllpNDJGNEI2L0VYbUdrQzlTSG5HN3dGZExyQWpSNHJQd1FUZFQ4anZ2N1lhd0N2bmMvZm41OGJ0OApNT0lUTlkrYldvYVUzd1o3K2pvRmlNNHE3eWY4ZHpwdFhLOFd2NG9CdGJma0V1WklDSnV4QUtQWVhrZnpUbVo2Cmh5S2J0S0o1Q1lPR2YycGV4Y3pnTDVBc1p5ZSsrWVhpVnhzSVRydU9sUjVROWxmMFZ0Y2IvcnlVNG9GNitoREEKQjNYNVlvTzYveW5TT3lPb0owVXVCVytyNU16VEZ1SDNsR0huU2JQbGFtOUJNalBQTlorUkU0b2lhZjhRQjdreApqUlJpSlFIY2VJUm4vdHNjQmpGSHovQ3pEbmpDczVtczBOOEtOb011RUkzSmlxSkw4bnpCQis4RFpLczJYcjRPCkxOWk9aOUNrQjRoSW5rUlcvcDdZQzlrTllkSVZZa05sMDVqc25Lc29pRW56RmVmdXlDWW1HblMva1RMNFJwYlUKcWpVciszdWxTTnNOM09IeGZKTXh6OCtISmdyaGpJUDVRNHdkRklLSjFuUWR4KzlGYm9CVEUvc2U2RDhQWldLZwpZQXdIeUtaSGZKUktMdkM4V3dLbldqYU5sNitNbFptSUNqUlZ5Z3B4RGxPdAotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    client-key-data: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS1FJQkFBS0NBZ0VBcEdCTlc0dGdPRHRyWmVsdU5TTVUvYzRtQ1dENFF3bC92aUtkN1d1bGNRWkNEWVQ5CkpCeG83WVpzWkpwVVZJc2VCbzJibjNqTUk2WEpEWnQ3SVVtWE5FQlovcmpLRGs5cHZZcHVYUittVksxRTNIRXUKc3FpeWplQ3Y3d0k2b3IrdHQ5YWorMEc5SG9WK2Fqb3VsczZhcmdYOWN5YXZLejBDOFUvSVhLd0NmVFJwbmY2dgo1djJKYlRZNVVEbjFOdmZpVkQ1SFVNTHlzREZlUEhQNEcxcyt1anI4QXEraGNqY2NoRWY1eUYvZm1DVzJEWGRuCnJwNkxxRzVpa1BFL3RQdTNYVSsxNGtLZHlPSTk0ZHYrc2VTSjc2UGIwMzVPUytBY1JobnBDK0oxVFVCSVI1VEoKWlZMTXdzMXU0RnR3ZGp3MFo2N0M0M2IrT0duMlRNZlRrelVIcDlzWm03YnZzZnJZSFYrK2YxTmh2dmZyTm1pWApRNEp3aWd3WG5KTmdRZm1hNmtWNkhrR3lNMGF6bXhFVUNFU21LcXFXeFB0dE5IZEFCa2FheXhZQ0R4RFZQelo1CjNrU2JUVUc1UnRqOHgzN2hQNDFMcXh6Y2N4RjR4clIyOU1ObkRBRzQydU4rOERIUVorSXlrcFNEeXpJb2dlZnYKK2oxeXNsbDZQNXlobkRaMTRpNWFFL2RkMGlwek9KUCtLWXprNXlubTZxdnJzYmY3Tys2b2xVVk1iUEpQbjVTdApySTAraTdGU2hDRlJNR1prL1VFUFVMVUxlbVgzKys5ODYrSWdFU1ZkNnFKT2l2Ky9TUlVIczVsMGhKcVFaaDlRCjZWbU9meFZHTjJrblNBNmM2U2Q0M0EzRnhkVHFvK0pDRDllNG9kUjVBWlpSQnNLeXlsd05XMytVWE9FQ0F3RUEKQVFLQ0FnQUxhWHcxYk5uRFRhekpLSW0wT3JsTVhiR2FXUmNqWUZkMEZlY3RBcG83M0psZFl1eElRNGl0WlBYRgpqa2xvalRnS2NHNXJoZkYyVUI1RFNaWWsyMzBaN1pYUjczWm53Kyt0Ynh6MmJpb1lHdWQ2L29pbGNyeml5TVN1CkxWTncxU24wWjN4L0J6TmdHUmlMdTNwY2tmOS9NWDlGTFZ4Zi9oNWtMb3ZVazBTZytMQ1VmWWdzMjFGZE9iU0UKODJFbzdkRFMxSGdURFZYWUViVmZNUlg2b0QwY3BOZTJRQWRQYkxBWUp2OGFnRDEveks1MUJPTTM1bDMvMVpvVwpRZ21RUVNHYjR0clgySlFuekQxTG53Qnh6VkllUnh3TjlPanVyNktHNDJtZ241cFJRTE5EOVBwK2hGOGU3ekJSCmQwZTVqYmg5c2s1cGlHdGg4MGxjVDB0TEh4Vm0zM3llVVBHbzE3UEJYNjY2dVlURDRleEExMFdXSGZqdWp6TEgKNHpjODg4a2xNN28wMzRwVkJNOFlkRVdBK2VTRjNMdTgxcUN1MVNNM2xLVitWUjNRY2Zub2JFNTJiYWxRQ2V3YgpuKzFHL1lZclBWMHN4VVAzNGdRTllGR2NjZFpvSGk1Y3RnOHBzQ3JVdTkrekgwUWg0cHk1aWZhMXk3QlNhSjZEClFySEFSc1M3TXZDRkVZN2JWcUhqM0FBeEpkQ3Vsc25MYjZETi82OExSaktHeEVnYVhwcFhWNFpLNnl6a1dTUHIKaUpocVVRVExoUjFMK1EwYXZqdTA0WHVSRFdtUW1CMEJTMHFwclhUTEVhaHhBR1NDQmZMUitGRDdDQWdPWE90YwpDS29oQUcrZDFJRWwyODQ2TmI3NFFaelhtSGhZSTh4UUErN0xMWTVLVzdNQ3M5NFFnUUtDQVFFQTBDR242ekYxClAwMUxCWTdwWE50NmxPd3grNlJtMUhscEF1Mi9rbnNmdmJPQWFid2lLeE1jUW00U0tIbEdWeVdmbXlBd3d1MTMKS0ZUd3BrbXJ1dXNsaHpjWlczV1p6WGVPQ0oxZVByT1AyNTVzeitrdmsyRW84eHZhNVF2VEo2TGVmUzJPbFV0aApuMG5lMSt5cnFmR0diYjJVNkt5eUFiMEVHWUdpTnpUbmFTaG9wVmZtMEJxcjRxdGxsS1lkeDhWaVRySmdidGpYCm4xd2gwOW9BY0UvWEEreDFkVy90L0xyNXM1NlIyTk13WlZkTWEvdVVTUXZ3enNJdDdCZ3BlVVQyN0doaXlORm8KOXBXdjluSlpjQWloQk1EWXRob2R5RGRJNTZPM3lOS094MGpHWnhKaU5UbmVpdDZmMDBacDBNRThpcmQra2lFSgpheEtCSWZUMitVS0dPUUtDQVFFQXlpNXRQTlducTJyTnFHTDg2V014TitQM3ZKZ1dOTGJZajQ3MjRvL1VGUk9VCnkzVjd0WEZDZ0NodWdCR2cvYnY0dERuV2wyTDJlM24wTnBmWTRSbjVwQXEyNURHdjdCSDhCKzBmWnM5cE41NmEKUnZ1REtnUklpMHNRUDQyRmtGcG5qSUd1MnhmRzM3Q3Vzbm9yMTE4QSs5d0I0M1Jia01ZYXJHVlN1UG5DMXJMQQpWVi9NZk9aZ1g1RTRnTnd6ZmVjZXRneXhVVzExSWExem0xTVZvV1p2K0QveVVPTG81NTd3OWwrZ0crOG12dE1sCmFuZTJOcGw4a3lKR1djb2QxdDk5bWpTVVVzdThNUlZRU2U4Y3JNVERKcytyWkZKbXI2bHljQ2R6eno3cGhXaTIKbXhsQy9jbks3dzd4QWpTaHlqUjJ1TXVKaDNZazdxcjdJaW1XTm1ITDZRS0NBUUJpRmxweXh6NUFkUWJVT2NQVgpGVUt5Q0phTng2OEdsNmxiemZ3bzVvblE5MVdmZnlDRE9HQnJGa0RNZmtzZUt3Y0xMcUtNV3lsN0FuemZnWHpECmZLcVZET3lRWTkzMkxVL3MwMjFsRTI3S3krRHdJeTlldjcxeXhUL21EaXFYVlhTUmZmVGllMElvdGNHbDlVMzUKcTIvMUxCR1Bqa1BkK2R5Q3dNdFlSVUNDR0o4b3ZVSno5UDNvdDJvS0lqZUt2SVZXSFU3QkxzUi93QVhaTjdaWgpOK2RYWEFzSEs1YjNNbzhYamJXaWYvVWc3WUdBcW5INTh2eXNGR3RjQnc4VXJlSEpESER4djI4K050RlV6aE5FCmIyeWpOdGRyQ3VmYVFlUEQ5eTVZSUpOVmJBREU5cTc5OHFYa3dJS0dLWHNZL05peGIwVGhUVnlJNzVHWUZVQ0gKdkVoUkFvSUJBUUMzWk11VHpoNE1RSklTTnRCQkI4ZmljYmdMYTAxaFBhWk0raHA2UW9yWEgyN3Q2MEJ1d2pEWApQVldXZCtjM29hVWtIZjdJVFcxVmJiY1hPai94Vi9WNVZucTFuVmg5WTRiZ3piZVpNM1MyamZoVmdObG1hSUpCClQ3S0tZMTRQSmVJZHNwaWdoZjNRZEZ6UzZqMFFYRTN4SjR6Uy9IMytZYVJhVW9KcDVheFZ3Y2p5NkRYOTZaN3IKc1RlMnM0ZEZvanJhV2NNU0lKNktFT0wzdHJLOU44VkRRd1lUVnZCN0FWS0R1UlByb3MvYmNuM1RDSW5SRndMSQpGK1FHbUc3ZXROVWk1cVRRUVp3UVRjd0pkSXJuTUlmd2tabGZJOXVmWmEyM2pDSGhrS2lVYWZxUno2VlR2aEtGCkxHRnpaYmlJU1hTVGhaVFh1bFFmNWhwc3o1cEE5QTdaQW9JQkFRREY0aDZBT0huR01yQVl1eVAvTlNMN0djSDEKcVdEbmhLaE1UTXY0L0dXdWhjRnNwR2xESzZ4S3lMbW1PWFl4SHBzR25TMS9OcUY5ZmlTanc2MEVUd21SeEVBbgpKempBeGFsdVpIVmVXbHJDbEh1TEZJMFJPRXdKNHhta1YxZlovd0Jwc3BoWklwSk83TWlCcTF1ZU84T0NwMjh6Cm9ablI4U2I0Wk5EeVpldXNmU3AvalpWbi9SWTNyNTVsb1RYaG03cVF0a1FMa0N3ZkJVR2FjVkVzSUpGd0JGZHcKczJDNktWTnY1dGk1SDY4NWh2WFRCSzJCTGhQZ2p4dkxGc3l2RWZiZHFyU25RaXAxbEFBTm1iakRQSmFFNjdKRApTVnRHdHMwcm05c2ZMQStsN1F2UXVPVldRSU1heVg0cXpUKy84UDQ4V3lQalppVzhQeWR1eFB1dWE2WFkKLS0tLS1FTkQgUlNBIFBSSVZBVEUgS0VZLS0tLS0K
+    token: df6dcc05bf8d7a7323ad1d15d44a6e50
+root@ip-172-31-86-242:~/.kube# cd
+root@ip-172-31-86-242:~# kubectl get nodes
+NAME                       STATUS   ROLES   AGE    VERSION
+aks-agentpool-40010687-0   Ready    agent   3d4h   v1.12.8
+aks-agentpool-40010687-1   Ready    agent   3d4h   v1.12.8
+root@ip-172-31-86-242:~# az aks get-credentials --resource-group K8s --name K8sResource
+
+
+
+sudo su << HERE
+cd /home/ubuntu/demopipeline/target/
+rm -rf *
+wget --no-check-certificate http://3.86.175.173:8081/repository/demo_pipeline/java/poc/demo-pipeline/2.0-SNAPSHOT/demo-pipeline-2.0-SNAPSHOT.war
+cd /home/ubuntu/demopipeline/
+sudo docker build -t demopipeline .
+
+docker login -u shivu999 -p Admin@123  
+
+sudo docker tag demopipeline shivu999/demopipeline:$BUILD_NUMBER
+docker push shivu999/demopipeline:$BUILD_NUMBER
+echo $BUILD_NUMBER > image.txt
+
+
+HERE

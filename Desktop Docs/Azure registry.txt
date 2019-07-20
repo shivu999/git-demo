@@ -1,0 +1,4 @@
+kubectl create secret docker-registry testauth --docker-server shivu457.azurecr.io --docker-username shivu457 --docker-password UluzHJn0mul/8gEKTtZFF9JAefRSvarY --docker-email sshindigeri@dxc.com  
+
+
+kubectl create secret docker-registry acr-auth --docker-server <acr-login-server> --docker-username <service-principal-ID> --docker-password <service-principal-password> --docker-email <email-address>

@@ -1,0 +1,18 @@
+<settings>
+  <servers>
+    <!-- Copy this section from the Maven section of the "Connect to Feed" dialog" -->
+    <server>
+	  <id>dev-azure-com-sandeepbansal0050-uniper-feed</id>
+	  <configuration>
+		<httpHeaders>
+		  <property>
+			<name>Authorization</name>
+			<!-- Treat this auth token like a password. Do not share it with anyone, including Microsoft support. -->
+			<!-- The generated token expires on or before 8/18/2019 -->
+			<value>Basic YXp1cmVBcnRpZmFjdHNBY2Nlc3NUb2tlbjpleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpTVXpJMU5pSXNJbmcxZENJNkltOVBkbU42TlUxZk4zQXRTR3BKUzJ4R1dIbzVNM1ZmVmpCYWJ5SjkuZXlKdVlXMWxhV1FpT2lJNFpqZzRPR0ZrWVMwNE0yVXhMVFl6T0RNdFlUWXpNQzAwTmpJeFlUaGtPV1V6TlRZaUxDSnpZM0FpT2lKMmMyOHVaSEp2Y0Y5M2NtbDBaU0IyYzI4dWNHRmphMkZuYVc1blgzZHlhWFJsSWl3aVlYVnBJam9pTnprMll6RTRZMkV0T1dJeU15MDBNR0ZpTFdFeU0yRXRaV0UwT0RVMlpqQTNZak13SWl3aWMybGtJam9pTURaaVlXTTBOemN0TlRRNFl5MDBPV0UyTFRreVlUY3RaalF5TnpsaU5qSmlNREZtSWl3aWFYTnpJam9pWVhCd0xuWnpkRzlyWlc0dWRtbHpkV0ZzYzNSMVpHbHZMbU52YlNJc0ltRjFaQ0k2SW1Gd2NDNTJjM1J2YTJWdUxuWnBjM1ZoYkhOMGRXUnBieTVqYjIxOGRuTnZPamRtTldFME9XUXlMV0V6WWpRdE5EUXlaUzFoTWpOaExUQmlPVFUyTURneU1UQXdPU0lzSW01aVppSTZNVFUxT0RNME56a3pPU3dpWlhod0lqb3hOVFkyTVRJME5UTTVmUS5qa01fWlVjM3Z2TzB3QVF5WDJaSmdYeUN3T19BY3lUcVl4LWxyOE5vVVk0LVpNSnBRR0k0NVQxbUhwTFN4SE1HYkUyZjFVV2gwRmpQQlpNV3J5Z0xjZnFxamlfc193SU5UNFE5emVrNDNGMURVc2VUNGdpcHo3X1JWV0RLT2JIWWV2SEdfa0xvSjZTcjdWeExubFN4WGhpdkg4YjZQd0NzV1IweXAzRWFBTEkwdXpLZmp1MEtXVjROYklCZFFZM1dTeW00bTBGNDhaTlVUWFVPTW9BUm9YNVR2ZjJUV3JRdWdDNGtScWdkTm5YMmNwWG1qc3E4bHNRMmYtUTYxSEpiNjBObzNJSGRLSDNnLVBIcjdRXzlrWXhkT3NIenNRZkhTb0IzX0ZyU2cwdGMyMVNTcEhlekZ6Z1gteW1nVlpDNmpKOGZ6QWhHdjNpZjh5cnpoQVlyX3c=</value>
+		  </property>
+		</httpHeaders>
+	  </configuration>
+	</server>
+  </servers>
+</settings>

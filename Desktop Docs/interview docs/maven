@@ -1,0 +1,67 @@
+-------------Maven Interview Questions---------------
+1. Explain what is POM? What Information Does Pom Contain?
+
+In Maven, POM (Project Object Model) is the fundamental unit of work. It is an XML file which holds the information about the project and configuration details used to build a project by Maven.
+
+POM contains the some of the following configuration information −
+•project dependencies.
+•plugins.
+•goals.
+•build profiles.
+•project version.
+•developers.
+•mailing list.
+
+2. what are the aspects does Maven Manages?
+
+Answer: Maven handles following activities of a developer
+
+• Build
+• Documentation
+• Reporting
+• Dependencies
+• SCMs
+• Releases
+• Distribution
+• Mailing list
+
+3. Mention the difference between Apache Ant and Maven?
+
+Apache Ant Maven
+• Ant is a toolbox – Maven is a framework
+• Ant does not have formal conventions like project directory structure – Maven has conventions
+• Ant is procedural; you have to tell to compile, copy and compress – Maven is declarative ( information on what to make & how to build)
+• Ant does not have lifecycle; you have to add sequence of tasks manually – Maven has a lifecycle
+• Ant scripts are not reusable – Maven plugins are reusable
+
+4. what are the build phases in Maven?
+
+Build phases in Maven are
+
+• Validate
+• Compile
+• Test
+• Package
+• Install
+• Deploy
+
+5. What would the command mvn clean do ?
+This command removes the target directory with all the build data before starting the build process.
+
+6. Why Maven Plugins are used?
+
+Answer: Maven plugins are used to
+
+• Create a jar file
+• Create war file
+• Compile code files
+• Unit testing of code
+• Documenting projects
+• Reporting
+
+7. What is the difference between mvn clean install and mvn install?
+mvn clean install tells Maven to do the clean phase in each module before running the install phase for each module.
+
+-----------------
+what does 404 504 indicats.
+

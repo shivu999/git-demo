@@ -1,0 +1,6 @@
+
+docker swarm join --token SWMTKN-1-33fklwnwlkmb25thhyagw7bp6mqpzwzc56dcdehrctnq02ziiq-4qrxaitdchmup801ekz5v7bqa 172.31.45.22:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+

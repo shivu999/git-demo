@@ -1,0 +1,11 @@
+http://34.235.17.219:8080    -- Jenkins
+username :shiv
+password : 123admin!@#$
+
+http://3.86.175.173:9000/sonar/  
+username : admin
+password : admin
+
+http://3.86.175.173:8081/  -- nexus 
+username : admin
+password : admin123

@@ -1,0 +1,49 @@
+--------------Git-----------------
+1. what is git?
+2. what is the diffrence between git and svn?
+3. what is merge confilicts have you faced? if you face how you resolve?
+4. what is git stash?
+5. what is the diffrence between git fetch, pull and clone?
+6. what is the diffrence between git merge and rebase?
+7. what is .gitignore file? what is the purpose of the file?
+8. what is git branch? what is branching strategies?
+9. what is cherrypic in git?
+10. How to check the last few commits?
+11. How to add remote repository
+12. when you push and pull the code on repository it asked every time password, how to resolve it?
+13. How to roll back committed code?
+14. What is the difference between the ‘git diff ’and ‘git status’?
+
+
+-------------Docker----------------------
+
+What is docker? and what is the purpose of this tool.
+What is a image?
+What is dockerfile?
+	- entrypoint vs cmd
+	- add vs copy
+	- expose
+	- from
+	- run
+What is docker compose?
+Whats is docker commit?
+how many ways we can launch containers?
+How to assign cpu utilization?
+ - Docker run -dti --name kelly -c 50% --image=nginx /bin/bash
+What is tag command?
+	Tag is used name a file before pushing to docker hub repositry
+	Ex: docker build -t shykes/myapp:1.0.2 -t shykes/myapp:latest .
+How many ways to create docker image?
+	-Dockerfile 
+	-Docker commit
+	-Docker tag
+What is diff bw VM and docker?
+What is docker swarm ?
+What is the diff bw image and container?
+What is docker registry?
+How many types of docker network?
+	-Host
+	-None
+	-Overlay 
+can we lose our data when a docker container exits?
+How to create Docker container?

@@ -1,0 +1,78 @@
+-------------AWS---------------
+
+1. What is VPC ?
+
+A virtual private cloud (VPC) is a virtual network dedicated to your AWS account. You can configure or create your VPC as per requirement like select region, create subnets (IP- CIDR), configure route tables, security groups, Internet gateway etc to your AWS account By which you can launch your AWS resources, such as Amazon EC2, RDS instances etc, into your VPC.
+
+2. What is VPC Peering?
+
+A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IP addresses. And instances which is in VPC can communicate with each other as if they are within the same network.
+
+You can create a VPC peering connection between your own VPCs, or with a VPC in another AWS account within a single region.
+
+If you have more than one AWS account within a same region and wants to share or transfer the data, you can peer the VPCs across those accounts to create a file sharing network. You can also use a VPC peering connection to allow other VPCs to access resources you have in one of your VPCs.
+
+3. What is EBS (Elastic Block Storage)?
+
+EBS is a virtualized SAN or storage area network. Elastic Block Store (Amazon EBS) provides persistence block level storage volumes for use with EC2 instances. EBS volumes are highly available and reliable storage volumes that can be attached to any running instance that is in the same Availability Zone.
+
+4. What is S3 ? What is it Used for ? Should Encryption be Used in S3?
+
+Amazon S3 is stand for Simple storage service that is storage for the Internet. It as a, “simple storage service that offers software developers a highly-scalable, reliable, and low-latency data storage infrastructure at very low costs”.
+
+Amazon S3 provides a simple web service interface which you can use to store and retrieve any amount of data, at any time, from anywhere on the web. Using this web service, developers can easily build applications that make use of Internet storage.
+
+You can think of it like ftp storage, where you can move files to and from there, but not mount it like a file system. AWS automatically puts your snapshots there, as well as AMIs there. Encryption should be considered for sensitive data, as S3 is a proprietary technology developed by Amazon themselves, and as yet unproven vis-a-vis a security standpoint.
+
+Encryption should be considered for sensitive data, as S3 is a proprietary technology developed by Amazon themselves, and yet to be proven from a security standpoint.
+
+5. what is versioning? what is the life cycle management?
+
+6. what is aws glacier?
+
+7. what is cloud front? did you configure cloud front in aws?
+
+
+8. What is an AMI?
+
+AMI stands for Amazon Machine Image. It is effectively a snapshot of the root filesystem. AWS AMI provides the information required to launch an instance, which is a virtual server in the cloud. You specify an AMI when you launch an instance, and you can launch as many instances from the AMI as you need. You can also launch instances from as many different AMIs as you need.
+
+An AMI includes the following:
+
+A template for the root volume for the instance ( such as an operating system, an application server, and applications)
+Launch permissions that control which AWS accounts can use the AMI to launch instances
+A block device mapping that specifies the volumes to attach to the instance when it’s launched
+Build a new AMI by first spinning up and instance from a trusted AMI. Then adding packages and components as required. Be wary of putting sensitive data onto an AMI. For instance your access credentials should be added to an instance after spinup. With a database, mount an outside volume that holds your MySQL data after spinup as well.
+
+9. What is the relation between Instance and AMI?
+
+An Amazon Machine Image (AMI) is a template that contains a software configuration (for example, an operating system, an application server, and applications). From an AMI, you launch an instance, which is a copy of the AMI running as a virtual server in the cloud.
+
+You can launch different types of instances from a single AMI. An instance type determines the hardware of the host computer used for your instance. Each instance type offers different compute and memory capabilities.
+
+10. What is Auto-Scaling ? How does it work?
+
+⦁ Horizontally Scaling
+⦁ Vertically Scaling
+
+Auto scaling is a feature of AWS which allows you to configure and automatically provision and spinup new instances without the need for your intervention. You can do this by setting thresholds and metrics to monitor. When those thresholds are crossed, a new instance of your choosing will be spun up, configured, and rolled into the load balancer pool. You’ve scaled horizontally without any operator intervention!
+
+Vertically Scaling: This is an incredible feature of AWS and cloud virtualization. Spinup a new larger instance than the one you are currently running. Pause that instance and detach the root ebs volume from this server and discard. Then stop your live instance, detach its root volume. Note the unique device ID and attach that root volume to your new server. And the start it again. You have scaled vertically in-place!!
+
+11. what is ELB? what is the benifit of elb? how many types of elb?
+
+12. what is route53? what is the use and how to work with it?
+
+13. What is CIDR? how to distribute ip range
+
+2^32-n	
+
+14. what is subnet in AWS? how to create public and private subnet?
+15. how many elastic ip's can we assign for a vpc.
+
+16. What's the difference between a public IP and an elastic IP in AWS EC2?
+
+17. what is the difference between security groups and NACL?
+
+
+

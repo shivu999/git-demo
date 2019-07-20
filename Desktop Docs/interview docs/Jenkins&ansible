@@ -1,0 +1,53 @@
+------------Jenkins--------------------
+what is continuous integration?
+
+Continuous integration is the process of continuously checking-in the developer’s code into a version control system and triggering the build to check and identify bugs in the written code.
+
+how you can move or copy Jenkins from one server to another?
+what are the commands you can use to start Jenkins manually?
+how can create a backup and copy files in Jenkins?
+how you can set up Jenkins job?
+What are the features of Jenkins?
+how many plugins are used in jenkins?
+What is Groovy in Jenkins?
+How will you secure Jenkins?
+What is Jenkinsfile?
+What is Jenkins pipeline? What is a CI CD pipeline?
+How can you define a Continuous Delivery Workflow?
+What is agent in Jenkins?
+how to add windows slave?
+
+
+---------------------Ansible------------------------
+1. What is Ansible?
+2. Ansible Playbooks vs Roles
+Roles
+- Roles are reusable subsets of a play.
+- A set of tasks for accomplishing certain role.
+- Example: common, webservers.
+
+Playbooks
+- Playbooks contain Plays.
+- Mapps among hosts and roles.
+- Example: site.yml, fooservers.yml, webservers.yml.
+
+3. How Ansible Works?
+4. how does Ansible work? Please explain in detail?
+5. What is Ansible Tower?
+6. what is Ansible Galaxy?
+7. what is the structure of roles
+	- files
+	- handlers
+	- meta
+	- templates
+	- tasks
+	- vars/group_vars
+8. write one playbook for installing apache2 in diffrent os platform.
+9. what is the command for check the syntax errors
+	- ansible-playbook yml_file --syntax-check
+10. apply command 
+    - - ansible-playbook yml_file
+11. how to create inventry files
+12. how many moduls are used?
+
+
